@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Homework {
     //1
     //1)
@@ -137,9 +139,11 @@ public class Homework {
         return str.length();
     }
 
-//    public String deleteLastWord(String str) {
-//        String result;
-//        String[] splitted = str.split("(\\s+)|(,\\s)|(\\.\\s)|(\\.)|(,)");
-////        return splitted(splitted[splitted.length-1]);
-//    }
+
+    public String deleteLastWord(String str) {
+        String[] splitted = str.split("(\\s+)|(,\\s)|(\\.\\s)|(\\.)|(,)");
+        String[] removedElement = Arrays.copyOf(splitted, splitted.length - 1);
+        String result = Arrays.toString(removedElement);
+        return result;
+    }
 }
