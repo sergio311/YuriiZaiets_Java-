@@ -10,13 +10,13 @@ import org.junit.Assert;
 
 import java.util.concurrent.TimeUnit;
 
-class TestIUA {
+    public class TestLogic {
     public static WebDriver driver;
     public static LogicTest logicTest;
 
     @BeforeClass
     public static void SetUp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Ponycorn\\source\\repos\\MySQL\\MySQL\\bin\\Debug\\chromedriver.exe");
         driver = new ChromeDriver();
         logicTest = new LogicTest(driver);
         driver.manage().window().maximize();
@@ -24,20 +24,16 @@ class TestIUA {
         driver.get("http://www.i.ua");
     }
 
+
     @Test
     public void Login() {
         logicTest.Login();
-    }
 
-    @Test
-    public void CheckName() {
-        Assert.assertEquals(logicTest.UserName, logicTest.CheckUser());
-    }
+            Assert.assertEquals(logicTest.UserName, logicTest.CheckUser());
+        }
 
-    @AfterClass
-    public static void tearDown() {
-        driver.quit();
     }
 
 
-}
+
+
