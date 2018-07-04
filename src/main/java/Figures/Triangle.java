@@ -15,11 +15,11 @@ public class Triangle implements IFigures {
 
     @Override
     public double calcPerimeter() {
-        return this.sideA + this.sideB + this.sideC;
+        return sideA + sideB + sideC;
     }
 
     @Override
     public double calcArea() {
-        return 0.5*this.sideA * this.height;
+        return 0.5 * sideA * height;
     }
 }
